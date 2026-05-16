@@ -1,0 +1,22 @@
+{
+  "id": "/",
+  "name": "NEUROSTEP",
+  "short_name": "NEUROSTEP",
+  "description": "Perawatan kaki diabetes cerdas",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "categories": ["health", "medical", "lifestyle"],
+  "lang": "id",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

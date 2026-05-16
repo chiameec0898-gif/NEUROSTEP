@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply font-sans bg-white text-gray-900 antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+}
+
+@layer components {
+  /* Gradient biru utama aplikasi */
+  .bg-neurostep-gradient {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+  }
+
+  /* Card standar */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-4 md:p-5;
+  }
+
+  /* Tombol utama */
+  .btn-primary {
+    @apply w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 active:bg-blue-800
+           text-white font-semibold rounded-xl transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Input field */
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+           bg-white text-gray-900 placeholder-gray-400 transition-all duration-200;
+  }
+
+  /* Label */
+  .input-label {
+    @apply block text-sm font-medium text-gray-700 mb-1.5;
+  }
+
+  /* Page container - responsif untuk HP, tablet, dan laptop */
+  .page-container {
+    @apply w-full max-w-none min-h-screen bg-white relative overflow-x-hidden;
+  }
+
+  .app-content {
+    @apply w-full px-4 py-4;
+  }
+
+  @screen md {
+    .app-content {
+      @apply px-6 py-6;
+    }
+  }
+
+  @screen lg {
+    .app-content {
+      @apply px-8;
+    }
+  }
+
+  .auth-panel {
+    @apply w-full max-w-md mx-auto;
+  }
+
+  @screen md {
+    .auth-panel {
+      @apply max-w-lg;
+    }
+  }
+
+  .bottom-nav-shell {
+    @apply fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-20;
+  }
+}
+
+/* Animasi fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Animasi slide up */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
